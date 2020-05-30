@@ -1,0 +1,28 @@
+{
+  "name": "sample_restapi_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "NODE_ENV=dev node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/slpusa/sample_restapi_node.git"
+  },
+  "author": "Udara Premadasa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slpusa/sample_restapi_node/issues"
+  },
+  "homepage": "https://github.com/slpusa/sample_restapi_node#readme",
+  "dependencies": {
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "multiple-redis": "^2.0.0",
+    "mysql": "^2.18.1",
+    "redis": "^3.0.2",
+    "uuid": "^8.1.0"
+  }
+}
