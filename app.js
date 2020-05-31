@@ -39,7 +39,6 @@ app.get("/stop", (req, res) => {
   res.json({ message: "Stoped the server" });
   process.exit(1);
 }); // Server Termination End point
-// app.use(require("./interceptors/auth")); // user request authentication
 // app.use(require("./headers.request")); // headers processing
 app.use(require("./app/router")); // app routes
 app.use((err, req, res, next) => {

@@ -12,6 +12,14 @@ module.exports = function(error, exception, statusCode) {
 }
 
 module.exports.Code = {
+    PAGE_NOT_FOUND: { message: "page not found", code: "PAGE_NOT_FOUND" },
+
     UNAUTHORIZED: { message: "Unauthorized", code: "UNAUTHORIZED" },
+
+    DATABASE_ERROR: { message: "Database Error", code: "DATABASE_ERROR" },
+
+    FILE_UPLOAD_ERROR: { message: "File Upload Error", code: "FILE_UPLOAD_ERROR" },
+
+    CACHE_ERROR: { message: "Cache Error", code: "CACHE_ERROR" },
 };
   

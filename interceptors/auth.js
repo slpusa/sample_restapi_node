@@ -9,16 +9,14 @@ let authorize = (req, res, roles, callback) => {
     if (typeof req.auth != "undefined") 
         callback(false, undefined);
     else
-        callback(true, "Error");
+        callback(true, undefined);
 };
 
-module.exports = function(roles = []) {
-    return [
-        (req, res, next) => {
-            authorize(req, res, roles, (err, exception) => {
-                if (!err || roles.length === 0) next();
-                else next(new Error(Error.UNAUTHORIZED, exception, 401));
-            });
-        }
-    ];
+module.exports = (roles = []) => {
+    return (req, res, next) => {
+        authorize(req, res, roles, (err, exception) => {
+            if (!err || roles.length === 0) next();
+            else next(new Error(Error.Code.UNAUTHORIZED, exception, 401));
+        });
+    }
 };

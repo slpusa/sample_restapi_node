@@ -14,6 +14,7 @@ const router = express.Router();
 
 const testRouter = express.Router();
 testRouter.get('/', test.get);
+testRouter.get('/auth', authorize([1]), test.getAuth);
 
 router.use('/', testRouter);
 
