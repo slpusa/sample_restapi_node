@@ -13,6 +13,6 @@ module.exports = {
         if(typeof req.auth != "undefined")
             res.status(200).json({message: "Success"});
         else
-            next(Error(Error.UNAUTHORIZED, undefined, 400));
+            next(new Error(Error.Code.UNAUTHORIZED, undefined, 400));
     }
 }
